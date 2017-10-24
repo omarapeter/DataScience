@@ -14,8 +14,19 @@ dna_sequence <- function(sequence) {
   return(gc_content)
 }
 
+
 get_size_class <- function(ear_length){
    # Calculate the size class for one or more earth lengths
    ear_lengths <- ifelse(ear_length > 10, "large", "small")
    return(ear_lengths)
 }
+
+
+gccontent <- dna_sequence(data1$dnaseq)
+
+earlength_class <- get_size_class(data1$earlength)
+
+DF <- data.frame(data1$id, earlength_class, gccontent)
+
+Earlength_DF <- write.csv(DF, file = "output/DF.csv")
+print(Earlength_DF)

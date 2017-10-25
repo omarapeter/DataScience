@@ -3,6 +3,7 @@
 #install.packages("stringr")
 library(stringr)
 
+#this file is for houseelf earlength and gc-content analysis
 
 data1 <- read.csv("data/houseelf_earlength_dna_data_1.csv")
 
